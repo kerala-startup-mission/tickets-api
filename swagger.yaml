@@ -1,8 +1,8 @@
 openapi: 3.0.3
 info:
-  title: Event Management API
+  title: Ticketing API
   description: |
-    API for managing event attendee verification through webhook endpoints.
+    API for event attendee verification.
   version: 1.0.0
   contact:
     name: API Support
