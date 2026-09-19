@@ -29,6 +29,7 @@ paths:
         - name: Attendee full name
         - type: Attendee type from ticket
         - badge: Badge name (if assigned)
+        - ticket: Name of the ticket
       operationId: verifyAttendeeWebhookGet
       parameters:
         - name: event
@@ -66,14 +67,16 @@ paths:
                     code: "ATT12345"
                     name: "Sidharth Kumar"
                     type: "Delegate"
-                    badge: "VIP Pass"
+                    badge: "VIP Pass",
+                    ticket: "VIP Pass"
                 no_badge:
                   summary: Attendee without badge
                   value:
                     code: "ATT99999"
                     name: "Jane Smith"
                     type: "Regular"
-                    badge: null
+                    badge: null,
+                    ticket: "Gold Pass"
         '403':
           description: Attendee belongs to a different event
           content:
@@ -235,11 +238,16 @@ components:
           nullable: true
           description: Badge name from ticket (null if no badge assigned)
           example: "VIP Pass"
+        ticket:
+          type: string
+          description: Name of the ticket
+          example: "Gold Pass"
       required:
         - code
         - name
         - type
         - badge
+        - ticket
       
     AttendeeFullData:
       type: object
