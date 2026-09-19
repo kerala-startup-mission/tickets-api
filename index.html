@@ -1,26 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Tickets API Documentation</title>
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@5.9.0/swagger-ui.css">
-</head>
-<body>
-    <div id="swagger-ui"></div>
-    <script src="https://unpkg.com/swagger-ui-dist@5.9.0/swagger-ui-bundle.js"></script>
-    <script src="https://unpkg.com/swagger-ui-dist@5.9.0/swagger-ui-standalone-preset.js"></script>
+<!doctype html>
+<html>
+  <head>
+    <title>Tickets API | Kerala Startup Mission</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <!-- Load the Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
+
+    <!-- Initialize the Scalar API Reference -->
     <script>
-        window.onload = function() {
-            SwaggerUIBundle({
-                url: "swagger.yaml", // Your YAML file
-                dom_id: '#swagger-ui',
-                presets: [
-                    SwaggerUIBundle.presets.apis,
-                    SwaggerUIStandalonePreset
-                ],
-                layout: "BaseLayout"
-            });
-        };
+      Scalar.createApiReference('#app', {
+        // The URL of the OpenAPI/Swagger document
+        url: "swagger.yaml"
+      })
     </script>
-</body>
+  </body>
 </html>
