@@ -67,7 +67,7 @@ paths:
                     code: "ATT12345"
                     name: "Sidharth Kumar"
                     type: "Delegate"
-                    badge: "VIP Pass",
+                    badge: "VIP Pass"
                     ticket: "VIP Pass"
                 no_badge:
                   summary: Attendee without badge
@@ -75,7 +75,7 @@ paths:
                     code: "ATT99999"
                     name: "Jane Smith"
                     type: "Regular"
-                    badge: null,
+                    badge: null
                     ticket: "Gold Pass"
         '403':
           description: Attendee belongs to a different event
